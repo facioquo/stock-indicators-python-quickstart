@@ -104,7 +104,7 @@ It's time to start writing some code.
       ))
    ```
 
-   > For a quickstart that includes converting from quotes from Pandas DataFrame, see our online ReplIt code example: [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
+   > For a quickstart that includes converting quotes from Pandas DataFrame, see our online ReplIt code example: [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
 
 4. Calculate an indicator from the quotes
 
