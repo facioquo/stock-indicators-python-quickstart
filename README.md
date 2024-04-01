@@ -6,20 +6,17 @@ These are the steps to setup a Python project and to run your first finanical ma
 
 Our baseline environment and tools that we've installed:
 
-- Windows 11 OS 23H2
+- Windows 11 OS
 - [Download and install Git for Windows](https://git-scm.com/download/win) (optional)
 
-> [!NOTE]
-> Don't sweat the OS.  These instructions are the same for Mac users; however, you'll have to download the right versions of tools and installers from the links provided.
->
-> Overally, Python and our library will work on Windows, Linux, and Mac operating system.
+> [!TIP]
+> Don't sweat the OS.  These instructions are the same for Mac users; however, you'll have to download the right versions of tools and installers from the links provided.  Overally, Python and our library will work on Windows, Linux, and Mac operating system.
 
 ### Install Python v3
 
 - [Download and install Python](https://www.python.org/downloads)
 
-> [!NOTE]
-> We installed `v3.12.2` with Administrative privileges for all users and chose to add Python to the PATH variables.  We support v3.8.x or newer.
+> We installed `v3.12.2` with Administrative privileges for all users and chose to add Python to the PATH variables.
 
 ```bash
 # test with Git Bash terminal command
@@ -31,7 +28,6 @@ Python 3.12.2
 
 - [Download and nstall .NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 
-> [!NOTE]
 > We installed `v8.0.202`.  We support v6.x or newer.  We _do not_ support Mono.
 
 ```bash
@@ -44,7 +40,7 @@ $ dotnet --version
 
 - [Download and install VS Code](https://code.visualstudio.com/download)
 
-Extensions installed:
+Recommended extensions:
 
 - [Python Extension Pack](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack) (includes primary Python extension)
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
@@ -56,10 +52,7 @@ Extensions installed:
 2. _Optional:_ Initialize git with `git init` and a add [`.gitignore`](.gitignore) file.
 3. Initialize Python workspace with `python -m venv .venv`
 
-   > [!TIP]
-   > You can also use VSCode command: `Python: Create Environment ...` and then `Python: Select Interpreter` to pick your just created `venv` instance.
-   >
-   > When done correctly, you should have a `.venv` file in your folder.
+   > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  When done correctly, you should have a `.venv` file in your folder.
 
 4. Install the [`stock-indicators`](https://pypi.org/project/stock-indicators) package from PyPI
 
@@ -68,7 +61,6 @@ Extensions installed:
    pip install stock-indicators
    ```
 
-   > [!NOTE]
    > We're using `v1.2.1`.  To verify, you should see these subfolders under `.venv/Lib/site-packages`:
    > - clr_loader
    > - pycparser
@@ -112,7 +104,6 @@ It's time to start writing some code.
       ))
    ```
 
-   > [!TIP]
    > For a quickstart that includes converting from quotes from Pandas DataFrame, see our online ReplIt code example: [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
 
 4. Calculate an indicator from the quotes
@@ -151,15 +142,9 @@ Click the _**Run Python File in Terminal**_ &#9658; play button in the top-right
    2017-01-18  214.20999999999998
    2017-01-19  213.98600000000002
    2017-01-20  214.02400000000003
-   2017-01-23  213.85400000000004
-   2017-01-24  214.10999999999999
-   2017-01-25  214.64399999999995
-   2017-01-26  215.29000000000002
-   2017-01-27  215.712
    ...
    ```
 
-   > [!NOTE]
    > The slight rounding errors shown on these raw results are normal for double floating point precision data types.  Developers will usually truncate our round to fewer significant digits when displaying.
 
 ## Still having trouble getting started?
