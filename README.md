@@ -16,25 +16,25 @@ Our baseline environment and tools that we've installed:
 
 - [Download and install Python](https://www.python.org/downloads)
 
-> We installed `v3.12.2` with Administrative privileges for all users and chose to add Python to the PATH variables.
+   > We installed `v3.12.2` with Administrative privileges for all users and chose to add Python to the PATH variables.
 
-```bash
-# test with Git Bash terminal command
-$ python --version
-Python 3.12.2
-```
+   ```bash
+   # test with Git Bash terminal command
+   $ python --version
+   Python 3.12.2
+   ```
 
 ### Install the .NET SDK
 
 - [Download and nstall .NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 
-> We installed `v8.0.202`.  We support v6.x or newer.  We _do not_ support Mono.
-
-```bash
-# test with Git Bash terminal command
-$ dotnet --version
-8.0.202
-```
+   > We installed `v8.0.202`.  We support v6.x or newer.  We _do not_ support Mono.
+   
+   ```bash
+   # test with Git Bash terminal command
+   $ dotnet --version
+   8.0.202
+   ```
 
 ### Install the Visual Studio Code IDE
 
@@ -124,7 +124,7 @@ It's time to start writing some code.
 
 ## Run the code
 
-Click the _**Run Python File in Terminal**_ &#9658; play button in the top-right side of the editor to run the code or execute `python main.py` from your bash terminal commandline.
+6. Click the _**Run Python File in Terminal**_ &#9658; play button in the top-right side of the editor to run the code or execute `python main.py` from your bash terminal commandline.
 
    ```bash
    # output
