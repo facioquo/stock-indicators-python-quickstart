@@ -1,4 +1,4 @@
-# Python quickstart
+# QuickStart for Stock Indicators for Python
 
 These are the steps to setup a Python project and to run your first finanical market price analysis with the [Stock Indicators for Python](https://python.stock.indicators).  We're following the guidance for the [Visual Studio Code Python Tutorial](https://code.visualstudio.com/docs/python/python-tutorial).
 
