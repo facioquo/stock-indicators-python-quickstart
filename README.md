@@ -1,46 +1,46 @@
-# QuickStart for Stock Indicators for Python
+# Stock Indicators for Python: QuickStart guide
 
-These are the steps to setup a Python project and to run your first finanical market price analysis with the [Stock Indicators for Python](https://python.stock.indicators).  We're following the guidance for the [Visual Studio Code Python Tutorial](https://code.visualstudio.com/docs/python/python-tutorial).
+These are the detailed steps to setup a Python project and to run your first finanical market price analysis with the [Stock Indicators for Python](https://python.stock.indicators) PyPI library package.  This guide is partly derived from the more detailed [Visual Studio Code Python Tutorial](https://code.visualstudio.com/docs/python/python-tutorial).
 
 ## Install prerequisite software
 
-Our baseline environment and tools that we've installed:
+My baseline environment and tools that I've already installed:
 
 - Windows 11 OS
 - [Download and install Git for Windows](https://git-scm.com/download/win) (optional)
 
 > [!TIP]
-> Don't sweat the OS.  These instructions are the same for Mac users; however, you'll have to download the right versions of tools and installers from the links provided.  Overally, Python and our library will work on Windows, Linux, and Mac operating system.
+> Don't sweat the OS.  These instructions are the same for Mac and Linux users; however, you'll have to download a different version of tools installers from the links provided.  Overall, Python and our library are designed to work everywhere -- on Windows, Linux, and Mac operating systems.
 
 ### Install Python v3
 
 - [Download and install Python](https://www.python.org/downloads)
 
-   > We installed `v3.12.2` with Administrative privileges for all users and chose to add Python to the PATH variables.
+   > I installed `v3.12.2`, the latest LTS version, using _administrative privileges_, for all users, and chose to add Python to my environment PATH variables.  We support `v3.8` or newer.
 
    ```bash
    # test with Git Bash terminal command
-   $ python --version
-   Python 3.12.2
+   python --version
+   > Python 3.12.2
    ```
 
 ### Install the .NET SDK
 
-- [Download and nstall .NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
+- [Download and install .NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 
-   > We installed `v8.0.202`.  We support v6.x or newer.  We _do not_ support Mono.
+   > I installed `v8.0.202`, the latest LTS version.  We support `v6` or newer.  We _do not_ support Mono.
    
    ```bash
    # test with Git Bash terminal command
-   $ dotnet --version
-   8.0.202
+   dotnet --version
+   > 8.0.202
    ```
 
 ### Install the Visual Studio Code IDE
 
 - [Download and install VS Code](https://code.visualstudio.com/download)
 
-Recommended extensions:
+I also installed these recommended extensions:
 
 - [Python Extension Pack](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack) (includes primary Python extension)
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
@@ -48,20 +48,20 @@ Recommended extensions:
 
 ## Setup your project
 
-1. Create a new project folder
-2. _Optional:_ Initialize git with `git init` and a add [`.gitignore`](.gitignore) file.
-3. Initialize Python workspace with `python -m venv .venv`
+1. Create a new project folder.
+2. Initialize git in this folder with `git init` bash command.  Also add a Python flavored [`.gitignore`](.gitignore) file; I found this in [the _gitignore_ templates repo](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore).  This step is _optional_ and is only needed if you intend to store your work in a git repository.
+3. Initialize Python workspace with `python -m venv .venv`.
 
-   > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  When done correctly, you should have a `.venv` file in your folder.
+   > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  When done correctly, you should have a `.venv` foler in the root of your project folder.  There are other ways to initialize; however, this is the recommended approach from [the Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial) I'd mentioned above.
 
-4. Install the [`stock-indicators`](https://pypi.org/project/stock-indicators) package from PyPI
+5. Install the [`stock-indicators`](https://pypi.org/project/stock-indicators) package from PyPI
 
    ```bash
    # git bash command
    pip install stock-indicators
    ```
 
-   > We're using `v1.2.1`.  To verify, you should see these subfolders under `.venv/Lib/site-packages`:
+   > I'm using `v1.2.1`, the latest version.  To verify, you should see these subfolders under `.venv/Lib/site-packages`:
    > - clr_loader
    > - pycparser
    > - pythonnet
@@ -72,9 +72,9 @@ Recommended extensions:
 
 It's time to start writing some code.
 
-1. To start, add a [`quotes.csv`](quotes.csv) file containing historical financial market prices in OHLCV format.  Use the one in this repo.  You can worry about all the available [stock quote sources](https://github.com/DaveSkender/Stock.Indicators/discussions/579) later.
+1. To start, add a [`quotes.csv`](quotes.csv) file containing historical financial market prices in OHLCV format.  Use the one I put in this repo.  You can worry about all the available [stock quote sources](https://github.com/DaveSkender/Stock.Indicators/discussions/579) later.
 
-2. Create a file `main.py` and import the utilities we'll be using at the top.
+2. Create a [`main.py`](main.py) file and import the utilities we'll be using at the top of it.
 
    ```python
    import csv
@@ -83,15 +83,15 @@ It's time to start writing some code.
    from stock_indicators import indicators, Quote
    ```
 
-3. Import the data from the CSV file and convert it to an iterable list of Quotes.
+3. Import the data from [the CSV file](quotes.csv) and convert it into an iterable list of the `Quote` class.
 
    ```python
-   # import csv file into interable list
+   # import each row of teh csv file into a raw interable string list
    with open('quotes.csv', 'r', newline='', encoding="utf-8") as file:
       rows = list(csv.reader(file))
       file.close()
 
-   # parse rows into quotes
+   # parse string rows into a proper `Quote` format
    quotes = []
    for row in rows[1:]: # skipping CSV file header row
       quotes.append(Quote(
@@ -104,16 +104,16 @@ It's time to start writing some code.
       ))
    ```
 
-   > For a quickstart that includes converting quotes from Pandas DataFrame, see our online ReplIt code example: [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
+   > These `quotes` can now be used and reused with the `stock-indicators` library.  For a quickstart that includes converting quotes from **Pandas DataFrame**, see our online _ReplIt_ code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
 
-4. Calculate an indicator from the quotes
+4. Calculate [an indicator](https://python.stockindicators.dev/indicators) from the `quotes`
 
    ```python
    # calculate 5-period simple moving average
    results = indicators.get_sma(quotes, 5)
    ```
 
-5. Print the `results` to console
+5. Configure the `results` console output
 
    ```python
    # show the first 30 periods, for brevity
@@ -124,9 +124,9 @@ It's time to start writing some code.
 
 ## Run the code
 
-6. Click the _**Run Python File in Terminal**_ &#9658; play button in the top-right side of the editor to run the code or execute `python main.py` from your bash terminal commandline.
+6. Click the _**Run Python File in Terminal**_ (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute `python main.py` from your bash terminal.
 
-   ```bash
+   ```console
    # output
    Date        SMA
    2017-01-03
@@ -145,8 +145,16 @@ It's time to start writing some code.
    ...
    ```
 
-   > The slight rounding errors shown on these raw results are normal for double floating point precision data types.  Developers will usually truncate our round to fewer significant digits when displaying.
+   > The slight rounding deviations shown on these raw results are normal for `double` floating point precision data types.  They're not _programming errors_.  Developers will usually truncate our round to fewer significant digits when displaying.
+
+You've done it!  That's the end of this QuickStart guide.
 
 ## Still having trouble getting started?
 
-If you get stuck, ask a question in our [open community discussions](https://github.com/DaveSkender/Stock.Indicators/discussions).
+If you get stuck, ask a question in our [open community help and support discussions]([https://github.com/DaveSkender/Stock.Indicators/discussions](https://github.com/DaveSkender/Stock.Indicators/discussions/categories/help-and-support)).
+
+And if you end up building something wonderful, come back and [share it with us](https://github.com/DaveSkender/Stock.Indicators/discussions/categories/show-and-tell).  We love &#128150; to see all the creative ways people are using the library.
+
+Good luck &#127808; and have fun in building your systems!
+
+-- @DaveSkender
