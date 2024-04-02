@@ -98,12 +98,12 @@ It's time to start writing some code.
 7. Import the data from [the CSV file](quotes.csv) and convert it into an iterable list of the `Quote` class.
 
    ```python
-   # import each row of teh csv file into a raw interable string list
+   # import each row of the csv file into a raw iterable string list
    with open('quotes.csv', 'r', newline='', encoding="utf-8") as file:
       rows = list(csv.reader(file))
       file.close()
 
-   # parse string rows into a proper `Quote` format
+   # parse each row into proper `Quote` format
    quotes = []
    for row in rows[1:]: # skipping CSV file header row
       quotes.append(Quote(
@@ -125,7 +125,7 @@ It's time to start writing some code.
    results = indicators.get_sma(quotes, 5)
    ```
 
-9. Configure the `results` console output
+9. Configure `results` for console output
 
    ```python
    # show the first 30 periods, for brevity
