@@ -29,7 +29,7 @@ My baseline environment and tools that I've already installed:
 - [Download and install .NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 
    > I installed `v8.0.202`, the latest LTS version.  We support `v6` or newer.  We _do not_ support Mono.
-   
+
    ```bash
    # test with Git Bash terminal command
    dotnet --version
@@ -50,11 +50,20 @@ I also installed these recommended extensions:
 
 1. Create a new project folder.
 2. Initialize git in this folder with `git init` bash command.  Also add a Python flavored [`.gitignore`](.gitignore) file; I found this in [the _gitignore_ templates repo](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore).  This step is _optional_ and is only needed if you intend to store your work in a git repository.
-3. Initialize Python workspace with `python -m venv .venv`.
+3. Initialize Python workspace with a [virtual environment](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments) (a cached instance):
 
-   > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  When done correctly, you should have a `.venv` foler in the root of your project folder.  There are other ways to initialize; however, this is the recommended approach from [the Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial) I'd mentioned above.
+   ```bash
+   # git bash commands
+   # create environment
+   python -m venv .venv
 
-5. Install the [`stock-indicators`](https://pypi.org/project/stock-indicators) package from PyPI
+   # then activate it
+   .venv\Scripts\activate
+   ```
+
+   > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  When done correctly, you should have a `.venv` folder in the root of your project folder.  There are other ways to initialize in a global environment; however, this is the recommended approach from [the Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial) I'd mentioned above.
+
+4. Install the [`stock-indicators`](https://pypi.org/project/stock-indicators) package from PyPI
 
    ```bash
    # git bash command
@@ -145,13 +154,13 @@ It's time to start writing some code.
    ...
    ```
 
-   > The slight rounding deviations shown on these raw results are normal for `double` floating point precision data types.  They're not _programming errors_.  Developers will usually truncate our round to fewer significant digits when displaying.
+   > The slight rounding deviations shown on these raw results are normal for `double` floating point precision data types.  They're not _programming errors_.  Developers will usually truncate or round to fewer significant digits when displaying.
 
 You've done it!  That's the end of this QuickStart guide.
 
 ## Still having trouble getting started?
 
-If you get stuck, ask a question in our [open community help and support discussions]([https://github.com/DaveSkender/Stock.Indicators/discussions](https://github.com/DaveSkender/Stock.Indicators/discussions/categories/help-and-support)).
+Ask a question in our [open community help and support discussions]([https://github.com/DaveSkender/Stock.Indicators/discussions](https://github.com/DaveSkender/Stock.Indicators/discussions/categories/help-and-support)).
 
 And if you end up building something wonderful, come back and [share it with us](https://github.com/DaveSkender/Stock.Indicators/discussions/categories/show-and-tell).  We love &#128150; to see all the creative ways people are using the library.
 
