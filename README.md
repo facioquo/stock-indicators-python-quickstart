@@ -12,7 +12,7 @@ My baseline environment and the tools that I've already installed:
 - Windows 11 OS
 - [Download and install Git for Windows](https://git-scm.com/download/win) (optional)
 
-> [!TIP]
+> [!NOTE]
 > Don't sweat the OS.  These instructions are the same for Mac and Linux users; however, you'll have to download a different version of tools installers from the links provided.  Overall, Python and our library are designed to work everywhere -- on Windows, Linux, and Mac operating systems.
 
 ### Install Python v3
@@ -138,26 +138,26 @@ It's time to start writing some code.
 
 10. Click the _**Run Python File in Terminal**_ (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute `python main.py` from your bash terminal.
 
-   ```console
-   # output
-   Date        SMA
-   2017-01-03
-   2017-01-04
-   2017-01-05
-   2017-01-06
-   2017-01-09  213.87199999999999
-   2017-01-10  214.102
-   2017-01-11  214.2
-   2017-01-12  214.22599999999997
-   2017-01-13  214.196
-   2017-01-17  214.156
-   2017-01-18  214.20999999999998
-   2017-01-19  213.98600000000002
-   2017-01-20  214.02400000000003
-   ...
-   ```
+    ```console
+    # output
+    Date        SMA
+    2017-01-03
+    2017-01-04
+    2017-01-05
+    2017-01-06
+    2017-01-09  213.87199999999999
+    2017-01-10  214.102
+    2017-01-11  214.2
+    2017-01-12  214.22599999999997
+    2017-01-13  214.196
+    2017-01-17  214.156
+    2017-01-18  214.20999999999998
+    2017-01-19  213.98600000000002
+    2017-01-20  214.02400000000003
+    ...
+    ```
 
-   > The slight rounding deviations shown on these raw results are normal for `double` floating point precision data types.  They're not _programming errors_.  Developers will usually truncate or round to fewer significant digits when displaying.
+    > The slight rounding deviations shown on these raw results are normal for `double` floating point precision data types.  They're not _programming errors_.  Developers will usually truncate or round to fewer significant digits when displaying.
 
 You've done it!  That's the end of this QuickStart guide.
 
