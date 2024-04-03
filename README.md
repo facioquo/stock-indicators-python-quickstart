@@ -10,7 +10,7 @@ These are the detailed steps to setup a Python project and to run your first fin
 My baseline environment and the tools that I've already installed:
 
 - Windows 11 OS
-- [Download and install Git for Windows](https://git-scm.com/download/win) (optional)
+- [Download and install Git for Windows](https://git-scm.com/download/win) for _git_ and bash terminal CLI
 
 > [!NOTE]
 > Don't sweat the OS.  These instructions are the same for Mac and Linux users; however, you'll have to download a different version of tools installers from the links provided.  Overall, Python and our library are designed to work everywhere -- on Windows, Linux, and Mac operating systems.
@@ -22,7 +22,7 @@ My baseline environment and the tools that I've already installed:
    > I installed `v3.12.2`, the latest LTS version, using _administrative privileges_, for all users, and chose to add Python to my environment PATH variables.  We support `v3.8` or newer.
 
    ```bash
-   # test with Git Bash terminal command
+   # test with bash terminal command
    python --version
    > Python 3.12.2
    ```
@@ -34,7 +34,7 @@ My baseline environment and the tools that I've already installed:
    > I installed `v8.0.202`, the latest LTS version.  We support `v6` or newer.  We _do not_ support Mono.
 
    ```bash
-   # test with Git Bash terminal command
+   # test with bash terminal command
    dotnet --version
    > 8.0.202
    ```
@@ -69,7 +69,7 @@ I also installed these recommended extensions:
 4. Install the [`stock-indicators`](https://pypi.org/project/stock-indicators) package from PyPI
 
    ```bash
-   # git bash command
+   # bash terminal command
    pip install stock-indicators
    ```
 
@@ -116,7 +116,7 @@ It's time to start writing some code.
       ))
    ```
 
-   > These `quotes` can now be used and reused with the `stock-indicators` library.  For a quickstart that includes converting quotes from **Pandas DataFrame**, see our online _ReplIt_ code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
+   > These `quotes` can now be used and reused with the `stock-indicators` library.  For a quickstart that includes converting quotes from **pandas.DataFrame**, see our online _ReplIt_ code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
 
 8. Calculate [an indicator](https://python.stockindicators.dev/indicators) from the `quotes`
 
@@ -139,7 +139,7 @@ It's time to start writing some code.
 10. Click the _**Run Python File in Terminal**_ (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute `python main.py` from your bash terminal.
 
     ```console
-    # output
+    # console output
     Date        SMA
     2017-01-03
     2017-01-04
@@ -157,9 +157,9 @@ It's time to start writing some code.
     ...
     ```
 
-    > The slight rounding deviations shown on these raw results are normal for `double` floating point precision data types.  They're not _programming errors_.  Developers will usually truncate or round to fewer significant digits when displaying.
+    > The small deviations shown in these raw results are normal for `double` floating point precision data types.  They're not _programming errors_.  Developers will usually truncate or round to fewer significant digits when displaying.
 
-You've done it!  That's the end of this QuickStart guide.
+**You've done it!**  That's the end of this QuickStart guide.
 
 ## Still having trouble getting started?
 
