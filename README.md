@@ -116,7 +116,7 @@ It's time to start writing some code.
       ))
    ```
 
-   > These `quotes` can now be used and reused with the `stock-indicators` library.  For a quickstart that includes converting quotes from **pandas.DataFrame**, see our online _ReplIt_ code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
+   > These `quotes` can now be used by the `stock-indicators` library.  For a quickstart that uses **pandas.DataFrame**, see our online _ReplIt_ code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
 
 8. Calculate [an indicator](https://python.stockindicators.dev/indicators) from the `quotes`
 
