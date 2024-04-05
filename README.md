@@ -1,6 +1,6 @@
 # Stock Indicators for Python: QuickStart guide
 
-These are the detailed steps to setup a Python project and to run your first finanical market price analysis with the [Stock Indicators for Python](https://python.stock.indicators) PyPI library package.  This guide is partly derived from the more detailed [Visual Studio Code Python Tutorial](https://code.visualstudio.com/docs/python/python-tutorial).
+These are the detailed steps to setup a Python project and to run your first finanical market price analysis with the [Stock Indicators for Python](https://python.stockindicators.dev) PyPI library package.  This guide is partly derived from the more detailed [Visual Studio Code Python Tutorial](https://code.visualstudio.com/docs/python/python-tutorial).
 
 > [!TIP]
 > If you just want to run the example code without building it yourself, [fork this repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) and skip the [_Write the code_](#write-the-code) section (steps 5-9) entirely.
