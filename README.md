@@ -19,13 +19,14 @@ These are the detailed steps to setup a Python project and to run your first fin
 
 ## Install prerequisite software
 
-My baseline environment and the tools that I've already installed:
-
-- Windows 11 OS
-- [Download and install Git for Windows](https://git-scm.com/download/win) for *git* and bash terminal CLI
+These are the tools that I've already installed and will use in this guide.
 
 > [!NOTE]
-> Don't sweat the OS.  These instructions are the same for Mac and Linux users; however, you'll have to download a different version of tools installers from the links provided.  Overall, Python and our library are designed to work everywhere -- on Windows, Linux, and Mac operating systems.
+> *Don't sweat the OS*.  These instructions were written for Windows 11, but are the same for Mac and Linux OS; however, you may need different tool editions.
+
+### Install Git
+
+- [Download and install Git for Windows](https://git-scm.com/download/win) for *git* and bash terminal CLI
 
 ### Install Python v3
 
@@ -64,7 +65,7 @@ I also installed these recommended extensions:
 ## Setup your project
 
 1. Create a new project folder.
-2. Initialize git in this folder with `git init` bash command.  Also add a Python flavored [`.gitignore`](.gitignore) file; I found this one in [the *gitignore* templates repo](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore).  This step is *optional* and is only needed if you intend to store your work in a git repository.
+2. Optional: initialize a *git repository* in this folder with `git init` bash command and add a Python flavored [`.gitignore`](.gitignore) file.  I found this one in [the *gitignore* templates repo](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore).
 3. Initialize Python workspace with a [virtual environment](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments) (a cached instance):
 
    ```bash
@@ -73,7 +74,7 @@ I also installed these recommended extensions:
    python -m venv .venv
 
    # then activate it
-   .venv\Scripts\activate
+   sh .venv/Scripts/activate
    ```
 
    > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  When done correctly, you should have a `.venv` folder in the root of your project folder.  There are other ways to initialize in a global environment; however, this is the recommended approach from [the Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial) I'd mentioned above.
@@ -85,12 +86,21 @@ I also installed these recommended extensions:
    pip install stock-indicators
    ```
 
-   > I'm using `v1.3.0`, the latest version.  To verify, you should see these subfolders under `.venv/Lib/site-packages`:
-   > - clr_loader
-   > - pycparser
-   > - pythonnet
-   > - stock_indicators
-   > - and others
+   > To verify, you should see it installed in `.venv/Lib/site-packages` or from CLI commandline `pip freeze`.  I'm using `v1.3.0`, the latest version.  
+   >
+   > ```bash
+   > pip freeze --local
+   > ```
+   >
+   > ```console
+   > # console output
+   > ...
+   > clr-loader==0.2.6
+   > pycparser==2.22
+   > pythonnet==3.0.3
+   > stock-indicators==1.3.0
+   > typing_extensions==4.12.2
+   > ```
 
 ## Write the code
 
@@ -148,15 +158,14 @@ It's time to start writing some code.
 
 ## Run the code
 
-10. Click the ***Run Python File in Terminal*** (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute from the commandline in your bash terminal.
+10. Click the ***Run Python File in Terminal*** (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute from the commandline in your bash terminal.  The SMA indicator output will print to the console.
 
    ```bash
-   # run from CLI (optional)
+   # from CLI (optional)
    python main.py
    ```
 
    ```console
-   # console output
    Date        SMA
    2017-01-03
    2017-01-04
