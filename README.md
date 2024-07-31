@@ -3,40 +3,52 @@
 These are the detailed steps to setup a Python project and to run your first finanical market price analysis with the [Stock Indicators for Python](https://python.stockindicators.dev) PyPI library package.  This guide is partly derived from the more detailed [Visual Studio Code Python Tutorial](https://code.visualstudio.com/docs/python/python-tutorial).
 
 > [!TIP]
-> If you just want to run the example code without building it yourself, [fork this repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) and skip the [_Write the code_](#write-the-code) section (steps 5-9) entirely.
+> **TLDR**, if you just want to quickly run this example, use these CLI commands:
+>
+> ```bash
+> git clone https://github.com/facioquo/stock-indicators-python-quickstart.git
+> cd stock-indicators-python-quickstart
+> python -m venv .venv
+> sh .venv/Scripts/activate
+> pip install stock-indicators
+> python main.py
+> ```
+>
+> or follow step-by-step instructions below
 
 ## Install prerequisite software
 
-My baseline environment and the tools that I've already installed:
-
-- Windows 11 OS
-- [Download and install Git for Windows](https://git-scm.com/download/win) for _git_ and bash terminal CLI
+These are the tools that I've already installed and will use in this guide.
 
 > [!NOTE]
-> Don't sweat the OS.  These instructions are the same for Mac and Linux users; however, you'll have to download a different version of tools installers from the links provided.  Overall, Python and our library are designed to work everywhere -- on Windows, Linux, and Mac operating systems.
+> *Don't sweat the OS*.  These instructions were written for Windows 11, but are the same for Mac and Linux OS; however, you may need different tool editions.
+
+### Install Git
+
+- [Download and install Git for Windows](https://git-scm.com/download/win) for *git* and bash terminal CLI
 
 ### Install Python v3
 
 - [Download and install Python](https://www.python.org/downloads)
 
-   > I installed `v3.12.2`, the latest LTS version, using _administrative privileges_, for all users, and chose to add Python to my environment PATH variables.  We support `v3.8` or newer.
+   > I installed `v3.12.4`, the latest LTS version, using *administrative privileges*, for all users, and chose to add Python to my environment PATH variables.  We support `v3.8` or newer.
 
    ```bash
    # test with bash terminal command
    python --version
-   > Python 3.12.2
+   > Python 3.12.4
    ```
 
 ### Install the .NET SDK
 
 - [Download and install .NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 
-   > I installed `v8.0.202`, the latest LTS version.  We support `v6` or newer.  We _do not_ support Mono.
+   > I installed `v8.0.303`, the latest LTS version.  We support `v6` or newer.  We *do not* support Mono.
 
    ```bash
    # test with bash terminal command
    dotnet --version
-   > 8.0.202
+   > 8.0.303
    ```
 
 ### Install the Visual Studio Code IDE
@@ -52,7 +64,7 @@ I also installed these recommended extensions:
 ## Setup your project
 
 1. Create a new project folder.
-2. Initialize git in this folder with `git init` bash command.  Also add a Python flavored [`.gitignore`](.gitignore) file; I found this one in [the _gitignore_ templates repo](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore).  This step is _optional_ and is only needed if you intend to store your work in a git repository.
+2. Optional: initialize a *git repository* in this folder with `git init` bash command and add a Python flavored [`.gitignore`](.gitignore) file.  I found this one in [the *gitignore* templates repo](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore).
 3. Initialize Python workspace with a [virtual environment](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments) (a cached instance):
 
    ```bash
@@ -61,7 +73,7 @@ I also installed these recommended extensions:
    python -m venv .venv
 
    # then activate it
-   .venv\Scripts\activate
+   sh .venv/Scripts/activate
    ```
 
    > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  When done correctly, you should have a `.venv` folder in the root of your project folder.  There are other ways to initialize in a global environment; however, this is the recommended approach from [the Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial) I'd mentioned above.
@@ -73,12 +85,22 @@ I also installed these recommended extensions:
    pip install stock-indicators
    ```
 
-   > I'm using `v1.2.1`, the latest version.  To verify, you should see these subfolders under `.venv/Lib/site-packages`:
-   > - clr_loader
-   > - pycparser
-   > - pythonnet
-   > - stock_indicators
-   > - and others
+   > I'm using `v1.3.0`, the latest version.  You should see it installed in `.venv/Lib/site-packages`.
+
+   ```bash
+   # test with bash terminal command
+   pip freeze --local
+   ```
+
+   ```console
+   ...
+   clr-loader==0.2.6
+   pycparser==2.22
+   pythonnet==3.0.3
+   stock-indicators==1.3.0
+   typing_extensions==4.12.2
+   ...
+   ```
 
 ## Write the code
 
@@ -116,7 +138,7 @@ It's time to start writing some code.
       ))
    ```
 
-   > These `quotes` can now be used by the `stock-indicators` library.  For a quickstart that uses **pandas.DataFrame**, see our online _ReplIt_ code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
+   > These `quotes` can now be used by the `stock-indicators` library.  For a quickstart that uses **pandas.DataFrame**, see our online *ReplIt* code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
 
 8. Calculate [an indicator](https://python.stockindicators.dev/indicators) from the `quotes`
 
@@ -136,28 +158,32 @@ It's time to start writing some code.
 
 ## Run the code
 
-10. Click the _**Run Python File in Terminal**_ (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute `python main.py` from your bash terminal.
+10. Click the ***Run Python File in Terminal*** (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute from the commandline in your bash terminal.  The SMA indicator output will print to the console.
 
-    ```console
-    # console output
-    Date        SMA
-    2017-01-03
-    2017-01-04
-    2017-01-05
-    2017-01-06
-    2017-01-09  213.87199999999999
-    2017-01-10  214.102
-    2017-01-11  214.2
-    2017-01-12  214.22599999999997
-    2017-01-13  214.196
-    2017-01-17  214.156
-    2017-01-18  214.20999999999998
-    2017-01-19  213.98600000000002
-    2017-01-20  214.02400000000003
-    ...
-    ```
+   ```bash
+   # from CLI (optional)
+   python main.py
+   ```
 
-    > The small deviations shown in these raw results are normal for `double` floating point precision data types.  They're not _programming errors_.  Developers will usually truncate or round to fewer significant digits when displaying.
+   ```console
+   Date        SMA
+   2017-01-03
+   2017-01-04
+   2017-01-05
+   2017-01-06
+   2017-01-09  213.87199999999999
+   2017-01-10  214.102
+   2017-01-11  214.2
+   2017-01-12  214.22599999999997
+   2017-01-13  214.196
+   2017-01-17  214.156
+   2017-01-18  214.20999999999998
+   2017-01-19  213.98600000000002
+   2017-01-20  214.02400000000003
+   ...
+   ```
+
+   > The small deviations shown in these raw results are normal for `double` floating point precision data types.  They're not *programming errors*.  Developers will usually truncate or round to fewer significant digits when displaying.
 
 **You've done it!**  That's the end of this QuickStart guide.
 
@@ -169,4 +195,4 @@ And if you end up building something wonderful, come back and [share it with us]
 
 Good luck &#127808; and have fun in building your systems!
 
--- @DaveSkender
+-- @DaveSkender, July 2024
