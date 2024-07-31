@@ -3,19 +3,18 @@
 These are the detailed steps to setup a Python project and to run your first finanical market price analysis with the [Stock Indicators for Python](https://python.stockindicators.dev) PyPI library package.  This guide is partly derived from the more detailed [Visual Studio Code Python Tutorial](https://code.visualstudio.com/docs/python/python-tutorial).
 
 > [!TIP]
-> **TLDR**, if you just want to quickly run this example:
+> **TLDR**, if you just want to quickly run this example, use these CLI commands:
 >
 > ```bash
-> # bash/shell CLI commands
 > git clone https://github.com/facioquo/stock-indicators-python-quickstart.git
 > cd stock-indicators-python-quickstart
 > python -m venv .venv
 > sh .venv/Scripts/activate
 > pip install stock-indicators
 > python main.py
-> 
-> # or follow step-by-step instructions below
 > ```
+>
+> or follow step-by-step instructions below
 
 ## Install prerequisite software
 
