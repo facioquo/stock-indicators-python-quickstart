@@ -86,21 +86,22 @@ I also installed these recommended extensions:
    pip install stock-indicators
    ```
 
-   > To verify, you should see it installed in `.venv/Lib/site-packages` or from CLI commandline `pip freeze`.  I'm using `v1.3.0`, the latest version.  
-   >
-   > ```bash
-   > pip freeze --local
-   > ```
-   >
-   > ```console
-   > # console output
-   > ...
-   > clr-loader==0.2.6
-   > pycparser==2.22
-   > pythonnet==3.0.3
-   > stock-indicators==1.3.0
-   > typing_extensions==4.12.2
-   > ```
+   > I'm using `v1.3.0`, the latest version.  You should see it installed in `.venv/Lib/site-packages`.
+
+   ```bash
+   # test with bash terminal command
+   pip freeze --local
+   ```
+
+   ```console
+   ...
+   clr-loader==0.2.6
+   pycparser==2.22
+   pythonnet==3.0.3
+   stock-indicators==1.3.0
+   typing_extensions==4.12.2
+   ...
+   ```
 
 ## Write the code
 
