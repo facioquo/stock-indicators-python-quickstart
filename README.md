@@ -140,7 +140,7 @@ It's time to start writing some code.
 
    > These `quotes` can now be used by the `stock-indicators` library.  For a quickstart that uses **pandas.DataFrame**, see our online *ReplIt* code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
 
-8. Calculate [an indicator](https://python.stockindicators.dev/indicators) from the `quotes`
+8. Calculate [an indicator](https://python.stockindicators.dev/indicators/) from the `quotes`
 
    ```python
    # calculate 5-period simple moving average
