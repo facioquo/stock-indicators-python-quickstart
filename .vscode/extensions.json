@@ -1,7 +1,12 @@
 {
     "recommendations": [
         "donjayamanne.python-extension-pack",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-python.black-formatter",
         "ms-python.debugpy",
+        "ms-python.isort",
+        "ms-python.pylint",
+        "ms-python.python",
         "ms-python.vscode-pylance"
     ]
 }

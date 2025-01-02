@@ -1,0 +1,16 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",                       // default: "never"
+    "source.organizeImports": "always"               // default: "never"
+  },
+  "editor.formatOnSave": true,                       // default: false
+
+  "isort.args": ["--profile", "black"],              // default: []
+  "isort.importStrategy": "fromEnvironment",         // default: "useBundled"
+
+  "pylint.importStrategy": "fromEnvironment",        // default: "useBundled"
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter" // default: null
+  }
+}
