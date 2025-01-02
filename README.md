@@ -76,7 +76,9 @@ I also installed these recommended extensions:
    sh .venv/Scripts/activate
    ```
 
-   > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  When done correctly, you should have a `.venv` folder in the root of your project folder.  There are other ways to initialize in a global environment; however, this is the recommended approach from [the Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial) I'd mentioned above.
+   > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  The comparable MacOS command is `source venv/bin/activate`.
+   >
+   > When done correctly, you should have a `.venv` folder in the root of your project folder.  There are other ways to initialize in a global environment; however, this is the recommended approach from [the Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial) I'd mentioned above.
 
 4. Install the [`stock-indicators`](https://pypi.org/project/stock-indicators) package from PyPI
 
