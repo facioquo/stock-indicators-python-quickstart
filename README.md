@@ -61,14 +61,14 @@ dotnet --version   # Should be ≥ 6.0
 4. **Install the [`stock-indicators`](https://pypi.org/project/stock-indicators) package** from PyPI
 
    ```bash
-   # bash terminal command
+   # install the package
    pip install stock-indicators
    ```
 
    > I'm using `v1.3.1`, the latest version.  You should see it installed in `.venv/Lib/site-packages`.
 
    ```bash
-   # test with bash terminal command
+   # verify the install
    pip freeze --local
    ```
 
