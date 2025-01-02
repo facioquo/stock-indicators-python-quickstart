@@ -3,20 +3,21 @@
 
 A beginner's guide to setting up and using the [Stock Indicators for Python](https://python.stockindicators.dev) library for financial market analysis.
 
-For the impatient, run these commands to get started immediately:
+> [!TIP]
+> **TLDR**, for the impatient, run these commands to fast-forward this tutorial:
+>
+> ```bash
+> git clone https://github.com/facioquo/stock-indicators-python-quickstart.git
+> cd stock-indicators-python-quickstart
+> python -m venv .venv
+> source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+> pip install stock-indicators
+> python main.py
+> ```
+>
+> or follow step-by-step instructions below
 
-```bash
-git clone https://github.com/facioquo/stock-indicators-python-quickstart.git
-cd stock-indicators-python-quickstart
-python -m venv .venv
-source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
-pip install stock-indicators
-python main.py
-```
-
-## Step-by-Step Setup
-
-1. **Prerequisites**
+## Install prerequisite software
 
 Required software versions:
 
@@ -31,16 +32,19 @@ VS Code Extensions:
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
 - [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
 
-   ```bash
-   # Verify installations
-   python --version   # Should be ≥ 3.8
-   dotnet --version   # Should be ≥ 6.0
-   ```
+```bash
+# Verify installations
+python --version   # Should be ≥ 3.8
+dotnet --version   # Should be ≥ 6.0
+```
 
-2. **Create a new project folder.**
-   > _**Optional**: initialize a `git` repository in this folder with `git init` bash command and add a Python flavored [`.gitignore`](.gitignore) file._  I found this one in [the _gitignore templates_ repo](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore).
+## Setup your project
 
-3. **Initialize Python workspace with a [virtual environment](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments) (a cached instance):**
+1. **Create a new project folder.**
+
+2. _**Optional**: initialize a `git` repository in this folder with `git init` bash command and add a Python flavored [`.gitignore`](.gitignore) file._  I found this one in [the _gitignore templates_ repo](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore).
+
+3. **Initialize Python workspace** with a [_virtual environment_](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments) (a cached instance):
 
    ```bash
    # create environment
@@ -54,7 +58,7 @@ VS Code Extensions:
    >
    > When done correctly, you should have a `.venv` folder in the root of your project folder.  There are other ways to initialize in a global environment; however, this is the recommended approach from [the Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial) I'd mentioned above.
 
-4. **Install the [`stock-indicators`](https://pypi.org/project/stock-indicators) package from PyPI**
+4. **Install the [`stock-indicators`](https://pypi.org/project/stock-indicators) package** from PyPI
 
    ```bash
    # bash terminal command
@@ -82,7 +86,7 @@ VS Code Extensions:
 
 It's time to start writing some code.
 
-5. **To start, add a [`quotes.csv`](quotes.csv) file containing historical financial market prices in OHLCV format.**  Use the one I put in this repo.  You can worry about all the available [stock quote sources](https://github.com/DaveSkender/Stock.Indicators/discussions/579) later.
+5. To start, **add a [`quotes.csv`](quotes.csv) file** containing historical financial market prices in OHLCV format.  Use the one I put in this repo.  You can worry about all the available [stock quote sources](https://github.com/DaveSkender/Stock.Indicators/discussions/579) later.
 
 6. **Create a [`main.py`](main.py) file and import the utilities we'll be using at the top of it.**
 
@@ -93,7 +97,7 @@ It's time to start writing some code.
    from stock_indicators import indicators, Quote
    ```
 
-7. **Import the data from [the CSV file](quotes.csv) and convert it into an iterable list of the `Quote` class.**
+7. **Import the data** from [the CSV file](quotes.csv) and convert it into an iterable list of the `Quote` class.
 
    ```python
    # Get price history data from CSV file
@@ -118,14 +122,14 @@ It's time to start writing some code.
 
    > These `quotes` can now be used by the `stock-indicators` library.  For a quickstart that uses **pandas.DataFrame**, see our online _ReplIt_ code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
 
-8. **Calculate [an indicator](https://python.stockindicators.dev/indicators/) from the `quotes`**
+8. **Calculate [an indicator](https://python.stockindicators.dev/indicators/)** from the `quotes`
 
    ```python
    # Calculate 5-period Simple Moving Average
    results = indicators.get_sma(quotes, 5)
    ```
 
-9. **Configure `results` for console output**
+9. **Configure `results`** for console output
 
    ```python
    # Show the results
@@ -137,7 +141,7 @@ It's time to start writing some code.
 
 ## Run the code
 
-10. **Click the _**Run Python File in Terminal**_ (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute from the commandline in your bash terminal.**  The SMA indicator output will print to the console.
+10. Click the _**Run Python File in Terminal**_ (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute from the commandline in your bash terminal.  The SMA indicator output will print to the console.
 
     ```bash
     # from CLI (optional)
@@ -169,28 +173,28 @@ It's time to start writing some code.
 
 ---
 
-## Common Issues
+## Common issues
 
-- **Import Errors**: Ensure you've activated the virtual environment
-- **Runtime Errors**: Verify .NET SDK installation
-- **.NET Loading Issues**: On Linux/macOS, you may need additional dependencies
+- **Import errors**: Ensure you've activated the virtual environment
+- **Runtime errors**: Verify .NET SDK installation
+- **.NET loading issues**: On Linux/macOS, you may need additional dependencies
 
-## Next Steps
+## Next steps
 
 - Explore [all available indicators](https://python.stockindicators.dev/indicators/)
 - Learn about [data sources](https://github.com/DaveSkender/Stock.Indicators/discussions/579)
 - Join our [community discussions](https://github.com/DaveSkender/Stock.Indicators/discussions)
 
-## Getting Help
+## Getting help
 
 Having trouble? Try these resources:
 
-1. [Documentation](https://python.stockindicators.dev)
-2. [GitHub Discussions](https://github.com/DaveSkender/Stock.Indicators/discussions)
-3. [Stack Overflow](https://stackoverflow.com/questions/tagged/stock-indicators)
+- [Documentation](https://python.stockindicators.dev)
+- [GitHub Discussions](https://github.com/DaveSkender/Stock.Indicators/discussions)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/stock-indicators)
 
-## Share Your Work
+## Share your work
 
-Built something cool? [Share it](https://github.com/DaveSkender/Stock.Indicators/discussions/categories/show-and-tell) with the community!
+**Built something cool?** [Share it](https://github.com/DaveSkender/Stock.Indicators/discussions/categories/show-and-tell) with the community!
 
 — @DaveSkender, January 2025
