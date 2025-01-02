@@ -16,7 +16,9 @@ pip install stock-indicators
 python main.py
 ```
 
-## Prerequisites
+## Step-by-Step Setup
+
+1. **Prerequisites**
 
 Required software versions:
 
@@ -31,18 +33,15 @@ VS Code Extensions:
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
 - [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
 
-## Step-by-Step Setup
-
-0. **Install Prerequisites**
-
    ```bash
    # Verify installations
    python --version   # Should be ≥ 3.8
    dotnet --version   # Should be ≥ 6.0
    ```
 
-1. **Create a new project folder.**
-2. **Optional: initialize a *git repository* in this folder with `git init` bash command and add a Python flavored [`.gitignore`](.gitignore) file.**  I found this one in [the *gitignore* templates repo](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore).
+2. **Create a new project folder.**
+   > _**Optional**: initialize a `git` repository in this folder with `git init` bash command and add a Python flavored [`.gitignore`](.gitignore) file._  I found this one in [the _gitignore templates_ repo](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore).
+
 3. **Initialize Python workspace with a [virtual environment](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments) (a cached instance):**
 
    ```bash
@@ -119,7 +118,7 @@ It's time to start writing some code.
       )
    ```
 
-   > These `quotes` can now be used by the `stock-indicators` library.  For a quickstart that uses **pandas.DataFrame**, see our online *ReplIt* code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
+   > These `quotes` can now be used by the `stock-indicators` library.  For a quickstart that uses **pandas.DataFrame**, see our online _ReplIt_ code example for the [Williams Fractal indicator](https://replit.com/@daveskender/Stock-Indicators-for-Python-Williams-Fractal).
 
 8. **Calculate [an indicator](https://python.stockindicators.dev/indicators/) from the `quotes`**
 
@@ -140,33 +139,33 @@ It's time to start writing some code.
 
 ## Run the code
 
-10. **Click the ***Run Python File in Terminal*** (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute from the commandline in your bash terminal.**  The SMA indicator output will print to the console.
+10. **Click the _**Run Python File in Terminal**_ (&#9658;) play button in the top-right side of the VS Code editor to run the code, or execute from the commandline in your bash terminal.**  The SMA indicator output will print to the console.
 
-   ```bash
-   # from CLI (optional)
-   python main.py
-   ```
+    ```bash
+    # from CLI (optional)
+    python main.py
+    ```
 
-   ```console
-   Date        SMA
-   --------------------
-   2017-01-03
-   2017-01-04
-   2017-01-05
-   2017-01-06
-   2017-01-09  213.872
-   2017-01-10  214.102
-   2017-01-11  214.200
-   2017-01-12  214.226
-   2017-01-13  214.196
-   2017-01-17  214.156
-   2017-01-18  214.210
-   2017-01-19  213.986
-   2017-01-20  214.024
-   ...
-   ```
+    ```console
+    Date        SMA
+    --------------------
+    2017-01-03
+    2017-01-04
+    2017-01-05
+    2017-01-06
+    2017-01-09  213.872
+    2017-01-10  214.102
+    2017-01-11  214.200
+    2017-01-12  214.226
+    2017-01-13  214.196
+    2017-01-17  214.156
+    2017-01-18  214.210
+    2017-01-19  213.986
+    2017-01-20  214.024
+    ...
+    ```
 
-   > The small deviations shown in these raw results are normal for `double` floating point precision data types.  They're not *programming errors*.  Developers will usually truncate or round to fewer significant digits when displaying.  We're showing 3 decimal places here.
+    > The small deviations shown in these raw results are normal for `double` floating point precision data types.  They're not _programming errors_.  Developers will usually truncate or round to fewer significant digits when displaying.  We're showing 3 decimal places here.
 
 **You've done it!**  That's the end of this QuickStart guide.
 
@@ -196,4 +195,4 @@ Having trouble? Try these resources:
 
 Built something cool? [Share it](https://github.com/DaveSkender/Stock.Indicators/discussions/categories/show-and-tell) with the community!
 
--- @DaveSkender, January 2025
+— @DaveSkender, January 2025
