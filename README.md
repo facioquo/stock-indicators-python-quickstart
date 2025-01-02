@@ -3,8 +3,6 @@
 
 A beginner's guide to setting up and using the [Stock Indicators for Python](https://python.stockindicators.dev) library for financial market analysis.
 
-## Quick Start
-
 For the impatient, run these commands to get started immediately:
 
 ```bash
