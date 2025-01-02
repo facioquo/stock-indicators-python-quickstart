@@ -53,7 +53,7 @@ VS Code Extensions:
    source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
    ```
 
-   > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  The comparable MacOS command is `source venv/bin/activate`.
+   > You can also use VSCode command: **Python: Create Environment ...** and then **Python: Select Interpreter** to pick your just created **venv** instance.  The comparable macOS command is `source venv/bin/activate`.
    >
    > When done correctly, you should have a `.venv` folder in the root of your project folder.  There are other ways to initialize in a global environment; however, this is the recommended approach from [the Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial) I'd mentioned above.
 
@@ -176,7 +176,7 @@ It's time to start writing some code.
 
 - **Import Errors**: Ensure you've activated the virtual environment
 - **Runtime Errors**: Verify .NET SDK installation
-- **.NET Loading Issues**: On Linux/MacOS, you may need additional dependencies
+- **.NET Loading Issues**: On Linux/macOS, you may need additional dependencies
 
 ## Next Steps
 
