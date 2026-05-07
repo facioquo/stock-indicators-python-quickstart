@@ -7,7 +7,6 @@ QuickStart tutorial for getting started with Stock Indicators for Python — a b
 PR titles must follow Conventional Commits format: `type: Subject`
 
 - `type` is lowercase: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`, `plan`
-- `Subject` starts with an uppercase letter
-- Example: `docs: Add virtual environment setup instructions`
+- `Subject` starts with an uppercase letter; keep total title length ≤ 65 characters
 
 Ignore this convention for PRs labeled `bot`, `dependencies`, or `automated`.
