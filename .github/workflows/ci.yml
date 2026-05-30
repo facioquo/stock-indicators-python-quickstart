@@ -30,9 +30,17 @@ jobs:
       run: |
         pylint $(git ls-files '*.py')
 
+  markdown:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v6
+      - name: Lint markdown
+        uses: DavidAnson/markdownlint-cli2-action@v23
+
   lint-and-test:
     runs-on: ubuntu-slim
-    needs: [build]
+    needs: [build, markdown]
     if: always()
     steps:
       - name: Verify required jobs succeeded
