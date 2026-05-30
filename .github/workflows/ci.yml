@@ -31,7 +31,7 @@ jobs:
         pylint $(git ls-files '*.py')
 
   lint-and-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs: [build]
     if: always()
     steps:
