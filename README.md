@@ -84,7 +84,7 @@ dotnet --version   # Should be ≥ 6.0
 
 It's time to start writing some code.
 
-5. To start, **add a [`quotes.csv`](quotes.csv) file** containing historical financial market prices in OHLCV format.  Use the one I put in this repo.  You can worry about all the available [stock quote sources](https://github.com/DaveSkender/Stock.Indicators/discussions/579) later.
+5. To start, **add a [`quotes.csv`](quotes.csv) file** containing historical financial market prices in OHLCV format.  Use the one I put in this repo.  You can worry about all the available [stock quote sources](https://github.com/facioquo/stock-indicators-dotnet/discussions/579) later.
 
 6. **Create a [`main.py`](main.py) file and import the utilities we'll be using at the top of it.**
 
@@ -180,19 +180,19 @@ It's time to start writing some code.
 ## Next steps
 
 - Explore [all available indicators](https://python.stockindicators.dev/indicators/)
-- Learn about [data sources](https://github.com/DaveSkender/Stock.Indicators/discussions/579)
-- Join our [community discussions](https://github.com/DaveSkender/Stock.Indicators/discussions)
+- Learn about [data sources](https://github.com/facioquo/stock-indicators-dotnet/discussions/579)
+- Join our [community discussions](https://github.com/facioquo/stock-indicators-dotnet/discussions)
 
 ## Getting help
 
 Having trouble? Try these resources:
 
 - [Documentation](https://python.stockindicators.dev)
-- [GitHub Discussions](https://github.com/DaveSkender/Stock.Indicators/discussions)
+- [GitHub Discussions](https://github.com/facioquo/stock-indicators-dotnet/discussions)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/stock-indicators)
 
 ## Share your work
 
-**Built something cool?** [Share it](https://github.com/DaveSkender/Stock.Indicators/discussions/categories/show-and-tell) with the community!
+**Built something cool?** [Share it](https://github.com/facioquo/stock-indicators-dotnet/discussions/categories/show-and-tell) with the community!
 
 — @DaveSkender, January 2025
